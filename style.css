@@ -4,16 +4,10 @@
 	box-sizing: border-box;
 }
 .main{
-	width: 100%;
-	background: linear-gradient(
-		to top,
-		rgba(0, 0, 0, 0.5) 50%,
-		rgba(0, 0, 0, 0.5) 50%),
-	url(1.jpg);
-
-		background-position: center;
-		background-size: cover;
-		height: 109vh;
+	
+    width: 100%;
+    background: blue;
+    height: 109vh;
 }
 .navbar{
 	width: 1200px;
@@ -207,15 +201,15 @@ ul li a:hover{
 	color: #000;
 	font-weight: bold;
 }
-.form.link{
+.form .link{
 	font-family: Arial,helvetica,sans-serif;
 	font-size: 17px;
 	padding-top: 20px;
 	text-align: center;
 }
-.form.link a{
+.link a{
 	text-decoration: none;
-	color: #ff7200;
+	color: #fff;
 }
 .liw{
 	padding-top: 15px;
