@@ -7,8 +7,8 @@
 	
     width: 100%;
     background: blue;
-    height: 109vh;
-}
+   min-height: 109vh; 
+   height: auto;
 .navbar{
 	width: 1200px;
 	height: 75px;
@@ -141,7 +141,7 @@ ul li a:hover{
 .form{
 	width: 240px;
 	height: 380px;
-	background: linear-gradient(to top,rgba(0,0,0.0,0.8)50%rgba(0,0,0,0.8)50%);
+	background: linear-gradient(to top,rgba(0,0,0,0.8)50%rgba(0,0,0,0.8)50%);
 	position: absolute;
 	top: 20px;
 	left: 870px;
