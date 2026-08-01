@@ -9,8 +9,10 @@
     background: blue;
    min-height: 109vh; 
    height: auto;
+}
 .navbar{
-	width: 1200px;
+	width: 100%;
+	max-width: 1200px;
 	height: 75px;
 	margin: auto;
 }
@@ -64,7 +66,7 @@ ul li a:hover{
 	font-family: 'Times New Roman';
 	width: 200px;
 	height: 40px;
-	background: fff;
+	background: #fff;
 	border: 1px solid #ff7200;
 	margin-top: 13px;
 	color: #000;
@@ -94,11 +96,13 @@ ul li a:hover{
 	outline:none;
 }
 .content{
-	width: 1200px;
+	width: 100%;
+	max-width: 1200px;
 	height: auto;
 	margin: auto;
 	color: #fff;
 	position: relative;
+	padding: 12px;
 }
 .content .par{
 	padding-left: 20px;
@@ -139,14 +143,14 @@ ul li a:hover{
 	font-size: 65px;
 }
 .form{
-	width: 240px;
-	height: 380px;
-	background: linear-gradient(to top,rgba(0,0,0,0.8)50%rgba(0,0,0,0.8)50%);
-	position: absolute;
-	top: 20px;
-	left: 870px;
-	border-radius: 10px;
-	padding: 25px;
+    width: 240px;
+    height: 380px;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 10px;
+    padding: 25px;
 }
 .form h2{
 	width: 220px;
@@ -162,7 +166,7 @@ ul li a:hover{
 .form input{
 	width: 240px;
 	height: 35px;
-	background: fff;
+	background: #fff;
 	border-bottom: 1px solid #ff7200;
 	border-top: none;
 	border-right: none;
@@ -230,6 +234,73 @@ ul li a:hover{
 .icons ion-icon{
 	color: #ff7200;
 }
+/* Your existing CSS */
 
+.icons ion-icon{
+    color: #ff7200;
+}
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu {
+        width: 100%;
+        height: auto;
+    }
+
+    ul {
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+    .search {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 40px;
+        margin-top: 5%;
+    }
+
+    .content span {
+        font-size: 45px;
+    }
+
+    .form {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 30px auto;
+    }
+}
+    html, body{
+    width: 100%;
+    overflow-x: hidden;
+    background: blue;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    background: blue;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
 
