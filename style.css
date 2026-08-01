@@ -266,7 +266,7 @@ body {
    LOGIN BUTTON
 ========================= */
 
-.form .btn {
+.form .btnn {
     width: 100%;
     height: 40px;
     margin-top: 25px;
@@ -276,7 +276,7 @@ body {
     border: none;
 }
 
-.form .btn:hover {
+.form .btnn:hover {
     background: #fff;
     color: #ff7200;
 }
@@ -313,24 +313,23 @@ body {
     padding-bottom: 10px;
     text-align: center;
 }
-
-.form .icons {
+.form .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-.form .icons a {
+.form .social-icons a {
     text-decoration: none;
     color: #ff7200;
 }
 
-.form .icons ion-icon {
+.form .social-icons ion-icon {
     font-size: 28px;
     transition: 0.3s ease;
 }
 
-.form .icons ion-icon:hover {
+.form .social-icons ion-icon:hover {
     color: #fff;
 }
 
@@ -456,4 +455,16 @@ body {
     .form {
         max-width: 100%;
     }
+}
+
+/* =========================
+   LOGIN LINK
+========================= */
+
+.login-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
 }
