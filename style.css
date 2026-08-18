@@ -576,3 +576,39 @@ SMALL PHONES
     color: white;
     line-height: 1.6;
 }
+/* =========================
+   DESIGN PAGE
+========================= */
+
+.designs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+
+.design-box {
+    width: 220px;
+    min-height: 180px;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.design-box h2 {
+    color: #ff7200;
+    margin-bottom: 15px;
+}
+
+.design-box p {
+    color: white;
+    line-height: 1.6;
+}
+
+.design-box:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 114, 0, 0.2);
+}
