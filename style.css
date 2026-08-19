@@ -577,38 +577,152 @@ SMALL PHONES
     line-height: 1.6;
 }
 /* =========================
-   DESIGN PAGE
+   CONTACT PAGE
 ========================= */
 
-.designs {
+.contact-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+
     display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-top: 30px;
-    padding-bottom: 40px;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
 }
 
-.design-box {
-    width: 220px;
-    min-height: 180px;
-    padding: 20px;
-    border: 1px solid white;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.3);
-    transition: 0.3s;
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.contact-info {
+    flex: 1;
 }
 
-.design-box h2 {
+.contact-info h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-info h1 span {
     color: #ff7200;
+}
+
+.contact-info > p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 18px;
+}
+
+/* Contact Information heading */
+
+.contact-info h3 {
+    color: #ff7200;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Email, Phone and Location */
+
+.contact-info h3 + p,
+.contact-info h3 + p + p,
+.contact-info h3 + p + p + p {
+    padding: 15px 20px;
+    margin-bottom: 12px;
+
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+/* =========================
+   SEND US A MESSAGE BOX
+========================= */
+
+.contact-form {
+    width: 400px;
+    padding: 30px;
+
+    background: #fff;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form h2 {
+    color: #ff7200;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
     margin-bottom: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    background: #fff;
+    color: #000;
+    font-size: 15px;
 }
 
-.design-box p {
-    color: white;
-    line-height: 1.6;
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
 }
 
-.design-box:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 114, 0, 0.2);
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ff7200;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+
+    background: #ff7200;
+    color: #fff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #000;
+}
+
+/* =========================
+   CONTACT MOBILE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-info h1 {
+        font-size: 38px;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 400px;
+    }
 }
