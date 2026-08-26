@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emanuel Kitili - Content Manager Dashboard</title>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="main">
+
+        <!-- Navigation Bar Section -->
+        <div class="navbar">
+            <div class="icons">
+                <h2 class="logo">EMANUEL KITILI the BOIZ</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="dashboard.html">DASHBOARD</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content Management Section -->
+        <div class="dashboard-container">
+            
+            <!-- Section 1: The Input Form (Create and Update) -->
+            <div class="manager-box">
+                <h2 id="formTitle">Add New Content & Media</h2>
+                
+                <form id="crudForm" class="dash-form">
+                    <!-- Hidden field to track if we are editing an item -->
+                    <input type="hidden" id="editIndex" value="-1">
+
+                    <div>
+                        <label for="contentTitle">Content Title</label>
+                        <input type="text" id="contentTitle" placeholder="e.g., Portrait Shot" required>
+                    </div>
+
+                    <div>
+                        <label for="contentType">Type</label>
+                        <select id="contentType">
+                            <option value="Image">Image File</option>
+                            <option value="Video">Video Clip</option>
+                            <option value="Text">Text Article</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="contentFile">Upload File/Media</label>
+                        <input type="file" id="contentFile">
+                    </div>
+
+                    <div>
+                        <label for="contentDesc">Short Description</label>
+                        <input type="text" id="contentDesc" placeholder="Describe the item..." required>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="dash-btn">Save Content</button>
+                </form>
+            </div>
+
+            <!-- Section 2: The Data Table (Read and Delete) -->
+            <div class="manager-box table-box">
+                <h2>Live Managed Content Records</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Type</th>
+                            <th>Attached File Source</th>
+                            <th>Description</th>
+                            <th>Actions Control</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsTableBody">
+                        <!-- Content rows will be placed here by Javascript later -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
