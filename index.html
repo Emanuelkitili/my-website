@@ -1,82 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>website design</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website design</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="main">
-		<div class="navbar">
-		    <div class="icons">
-		    	<h2 class="logo">EMANUEL KITILI the BOIZ</h2>
-		    </div>
-		    <div class="menu">
-		    	<ul>
-    <li><a href="index.html">HOME</a></li>
-    <li><a href="about.html">ABOUT</a></li>
-    <li><a href="service.html">SERVICE</a></li>
-    <li><a href="design.html">DESIGN</a></li>
-    <li><a href="contact.html">CONTACT</a></li>
-</ul>
-		    </div>
-		    <div class="search">
-		    	<input class="srch" type="search" name="" placeholder="Type to search">
-		    	<a href="#">
-		    		<button class="btn">search</button>
-		    	</a>
-		</div>
-	</div>
-	<div class="content">
-		<div class="content-text">
-		<h1>Web Design &amp;<br><span>Development</span></h1>
-		<p class="par">
-			Welcome to Emanuel Kitili website.Am passinately looking forward to deliver quality services according to your wish<br>feel free to reach out to anything you wish to be done.
-		</p>
+    <div class="main">
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="icons">
+                <h2 class="logo">EMANUEL KITILI the BOIZ</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="design.html">DESIGN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="dashboard.html">DASHBOARD</a></li>
+                </ul>
+            </div>
+            <!-- FIXED WORKING SEARCH BAR HTML -->
+            <div class="search">
+                <input class="srch" type="search" id="siteSearch" placeholder="Type to search">
+                <button class="btn" id="searchBtn">search</button>
+            </div>
+        </div>
 
-		<button class="cn">
-			<a href="#">JOIN US</a>
-		</button>
-	</div>
-	<div class="form">
-		<h2>Login Here</h2>
-		<input type="email" name="Email" placeholder=
-		"Enter Email Here">
-		<input type="password" name="" placeholder=
-		"Enter Password Here">
-		 <a href="login.html" class="btnn login-link">Login</a>
-		<p class="link">
-		Don't have an account?<br>
-		<a href="#"> Sign Up Here</a></p>
-		<p class="liw"> log in with</p>
-		<div class="social-icons">
-    <a href="https://www.facebook.com/" target="_blank">
-        <ion-icon name="logo-facebook"></ion-icon>
-    </a>
+        <!-- Main Landing Content Area -->
+        <div class="content">
+            <div class="content-text">
+                <h1>Web Design &amp;<br><span>Development</span></h1>
+                <p class="par">
+                    Welcome to Emanuel Kitili website.Am passinately looking forward to deliver quality services according to your wish<br>feel free to reach out to anything you wish to be done.
+                </p>
+                <button class="cn">
+                    <a href="#">JOIN US</a>
+                </button>
+            </div>
 
-    <a href="https://www.instagram.com/" target="_blank">
-        <ion-icon name="logo-instagram"></ion-icon>
-    </a>
+            <!-- Login Box Component -->
+            <div class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="Email" placeholder="Enter Email Here">
+                <input type="password" name="" placeholder="Enter Password Here">
+                
+                <a href="dashboard.html" class="btnn login-link">Login</a>
+                
+                <p class="link">
+                    Don't have an account?<br>
+                    <a href="#"> Sign Up Here</a>
+                </p>
+                <p class="liw"> log in with</p>
+                
+                <!-- Social Interactive Icons Links Grid -->
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="https://x.com" target="_blank" rel="noopener">
+                        <ion-icon name="logo-x"></ion-icon>
+                    </a>
+                    <a href="https://www.google.com/" target="_blank" rel="noopener">
+                        <ion-icon name="logo-google"></ion-icon>
+                    </a>
+                    <a href="https://skype.com" target="_blank" rel="noopener">
+                        <ion-icon name="logo-skype"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <a href="https://twitter.com/" target="_blank">
-        <ion-icon name="logo-twitter"></ion-icon>
-    </a>
+    <!-- HOMEPAGE SEARCH LOGIC SCRIPT (FIXED) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("siteSearch");
+            const searchBtn = document.getElementById("searchBtn");
 
-    <a href="https://www.google.com/" target="_blank">
-        <ion-icon name="logo-google"></ion-icon>
-    </a>
+            // Redirects to services page passing the filter query parameter
+            function performSearch() {
+                const query = searchInput.value.trim();
+                if (query !== "") {
+                    window.location.href = `service.html?search=${encodeURIComponent(query)}`;
+                }
+            }
 
-    <a href="https://www.skype.com/" target="_blank">
-        <ion-icon name="logo-skype"></ion-icon>
-    </a>
-</div>
-	</div>
-	</div>
-<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js">
-</script>
+            // Fire on search button click
+            searchBtn.addEventListener("click", performSearch);
+
+            // Fire on Enter key press inside input box
+            searchInput.addEventListener("keypress", function (e) {
+                if (e.key === "Enter") {
+                    performSearch();
+                }
+            });
+        });
+    </script>
+
+    <!-- Official and Up-To-Date Ionicons Scripts Injection -->
+    <script type="module" src="https://jsdelivr.net"></script>
+    <script nomodule src="https://jsdelivr.net"></script>
 </body>
 </html>
-
-			
-
-
