@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Login Success</title>
+    <!-- Links to your existing stylesheet to keep your brand's colors/fonts -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="main">
+        <!-- Reusing your layout navbar -->
+        <div class="navbar">
+            <div class="icons">
+                <h2 class="logo">EMANUEL KITILI the BOIZ</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="design.html">DESIGN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
 
-    <h1>Welcome to the Login Page</h1>
-    <p>You have successfully opened the login page.</p>
-
+        <!-- Success Message Content -->
+        <div class="content" style="justify-content: center; align-items: center; flex-direction: column; text-align: center; margin-top: 100px;">
+            <div class="content-text">
+                <h1 style="font-size: 50px; color: #ff7200; margin-bottom: 20px;">Welcome Back!</h1>
+                <p class="par" style="font-size: 18px; line-height: 1.6; max-width: 600px; margin-bottom: 30px;">
+                    You have successfully authenticated and logged into the portal. From here, you can manage your services, designs, and contact requests.
+                </p>
+                <button class="cn">
+                    <a href="index.html">GO TO HOME</a>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
