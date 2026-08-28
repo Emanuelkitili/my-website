@@ -647,3 +647,119 @@ SMALL PHONES
   width: 100%;
   height: 40px;
   background: #ff7200;
+/* =========================
+   SIGN UP PAGE
+========================= */
+
+.signup-container {
+    width: 100%;
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 60px 20px;
+}
+
+.signup-form {
+    width: 350px;
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.signup-form h2 {
+    text-align: center;
+    color: #ff7200;
+    background: #fff;
+
+    padding: 10px;
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+}
+
+.signup-form input {
+    width: 100%;
+    height: 42px;
+
+    margin-top: 15px;
+    padding: 10px;
+
+    background: #fff;
+    color: #000;
+
+    border: none;
+    border-bottom: 2px solid #ff7200;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.signup-form input:focus {
+    outline: none;
+}
+
+.signup-form input::placeholder {
+    color: #555;
+}
+
+.signup-btn {
+    width: 100%;
+    height: 42px;
+
+    margin-top: 25px;
+
+    background: #ff7200;
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background: #fff;
+    color: #ff7200;
+}
+
+.signup-login {
+    text-align: center;
+    color: #fff;
+
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+.signup-login a {
+    color: #ff7200;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-login a:hover {
+    color: #fff;
+}
+
+
+/* =========================
+   SIGN UP MOBILE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .signup-container {
+        padding: 40px 20px;
+    }
+
+    .signup-form {
+        width: 100%;
+        max-width: 350px;
+    }
+}
