@@ -1,81 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - EMANUEL KITILI the BOIZ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - EMANUEL KITILI the BOIZ</title>
+  <link rel="stylesheet" href="contact.css">
 </head>
-
 <body>
+  <header>
+    <a href="index.html">← Back to Home</a>
+    <h1>EMANUEL KITILI the BOIZ</h1>
+  </header>
 
-    <div class="main">
+  <main class="contact-container">
+    <h2>CONTACT US</h2>
+    <p class="subtitle">Have a question? Get in touch</p>
 
-        <!-- NAVIGATION BAR -->
-        <div class="navbar">
+    <div class="form-card">
+      <div class="input-box">
+        <span>👤</span>
+        <input id="cName" type="text" placeholder="Enter Your Name">
+      </div>
 
-            <div class="icons">
-                <h2 class="logo">EMANUEL KITILI the BOIZ</h2>
-            </div>
+      <div class="input-box">
+        <span>✉️</span>
+        <input id="cEmail" type="email" placeholder="Enter Your Email">
+      </div>
 
-            <div class="menu">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="service.html">SERVICE</a></li>
-                    <li><a href="design.html">DESIGN</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </div>
-
-            <div class="search">
-                <input class="srch" type="search" placeholder="Type To Search">
-                <button class="btn">Search</button>
-            </div>
-
-        </div>
-
-
-        <!-- CONTACT SECTION -->
-        <div class="contact-content">
-
-            <div class="contact-info">
-
-                <h1>CONTACT <span>US</span></h1>
-
-                <p>
-                    Have a question, project or idea?
-                    We would love to hear from you.
-                    Get in touch with EMANUEL KITILI the BOIZ.
-                </p>
-
-                <h3>Contact Information</h3>
-
-                <p>📧Email: emanuel@example.com</p>
-                <p>📞 Phone: +254 701295634</p>
-                <p>📍 Location: Kenya</p>
-
-            </div>
-
-
-            <!-- CONTACT FORM -->
-            <div class="contact-form">
-
-                <h2>Send Us A Message</h2>
-
-                <input type="text" name="name" placeholder="Enter Your Name">
-
-                <input type="email" name="email" placeholder="Enter Your Email">
-
-                <textarea name="message" placeholder="Enter Your Message"></textarea>
-
-                <button type="button">SEND MESSAGE</button>
-
-            </div>
-
-        </div>
-
+      <div class="input-box message-box">
+        <span>💬</span>
+        <textarea id="cMsg" placeholder="Enter Your Message"></textarea>
+      </div>
     </div>
 
+    <button class="send-btn" onclick="sendToWhatsApp()">SEND MESSAGE</button>
+    
+    <div class="info">
+      <p>📧 Email: kitilimbuvi663@gmail.com</p>
+      <p>📞 Phone: +254 701295634</p>
+      <p>📍 kitui, kenya</p>
+    </div>
+
+    <p class="footer">We typically respond within 24 hours • © 2024 EMANUEL KITILI the BOIZ</p>
+  </main>
+
+<script>
+function sendToWhatsApp(){
+  let name = document.getElementById('cName').value || "No name";
+  let email = document.getElementById('cEmail').value || "No email";
+  let msg = document.getElementById('cMsg').value || "No message";
+  let text = `Hi Emanuel, I'm ${name}%0AEmail: ${email}%0AMessage: ${msg}`;
+  window.open(`https://wa.me/254701295634?text=${text}`, '_blank');
+}
+</script>
 </body>
 </html>
